@@ -1,24 +1,4 @@
 
-function calcularPromedio (nota1, nota2) {
-
-
-    if (nota1 <= 0 || nota1 > 10) {
-
-        alert ("Por favor ingrese notas correctas, gracias");
-        
-    
-} else {
-    promedio = (parseFloat(nota1) + parseFloat (nota2)) / 2;
-
-    console.log(promedio);
-    
-
-    alert (`El promedio final de alumno ${nombreIngresado} es ${promedio}`)
-    
-}
-}
-
-
 
 function capturar() {
 
