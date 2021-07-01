@@ -11,13 +11,17 @@ function capturar() {
     }
     
      nombreIngresado = document.getElementById("nombre").value;
-     apellidoIngresado = document.getElementById("apellido").valueM
-     nota1Ingresado = document.getElementById("nota1").value
-     nota2Ingresado= document.getElementById("nota2").value
+     apellidoIngresado = document.getElementById("apellido").value;
+     nota1Ingresado = document.getElementById("nota1").value;
+     nota2Ingresado= document.getElementById("nota2").value;
 
-    let nuevoAlumno = new alumno (nombreIngresado, apellidoIngresado, nota1Ingresado, nota2Ingresado);
+     nuevoAlumno = new alumno (nombreIngresado, apellidoIngresado, nota1Ingresado, nota2Ingresado);
 
-    calcularPromedio (nota1Ingresado, nota2Ingresado);
+     calcularPromedio (nota1Ingresado, nota2Ingresado);
+    
+     guardarDato();
+
+     alert("Usted Ingreso las notas de " + datosGuardados.length )
 
 
 }
@@ -37,8 +41,18 @@ function calcularPromedio (nota1, nota2) {
     console.log(promedio);
     
 
-    alert (`El promedio final de alumno ${nombreIngresado} es ${promedio}`)
+    alert (`El promedio final de alumno ${nombreIngresado} es ${promedio}`);
     
 }
 }
+
+let datosGuardados = [];
+
+function guardarDato() {
+    datosGuardados.push(nuevoAlumno);
+
+    console.log(datosGuardados);
+}
+
+
 
