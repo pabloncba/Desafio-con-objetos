@@ -15,15 +15,9 @@ function capturar() {
      nota1Ingresado = document.getElementById("nota1").value;
      nota2Ingresado= document.getElementById("nota2").value;
 
-     nuevoAlumno = new alumno (nombreIngresado, apellidoIngresado, nota1Ingresado, nota2Ingresado);
-
-     calcularPromedio (nota1Ingresado, nota2Ingresado);
-    
-     guardarDato();
-
-     alert("Usted Ingreso las notas de " + datosGuardados.length )
-
-
+     nuevoAlumno = new alumno (nombreIngresado, apellidoIngresado, nota1Ingresado, nota2Ingresado);   
+   
+    calcularPromedio (nota1Ingresado, nota2Ingresado);
 }
 
 
@@ -42,6 +36,10 @@ function calcularPromedio (nota1, nota2) {
     
 
     alert (`El promedio final de alumno ${nombreIngresado} es ${promedio}`);
+
+    guardarDato();
+
+    alert("Usted Ingreso las notas de " + datosGuardados.length + " alumno/s")
     
 }
 }
